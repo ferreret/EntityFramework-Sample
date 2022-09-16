@@ -5,14 +5,16 @@ namespace projectef.Models
 {
     public class Tarea
     {
-        [Key]
+        // Utilizo Fluent API, no atributos
+
+        // [Key]
         public Guid TareaId { get; set; }
 
-        [ForeignKey("CategoriaId")]
+        // [ForeignKey("CategoriaId")]
         public Guid CategoriaId { get; set; }
 
-        [Required]
-        [MaxLength(200)]
+        // [Required]
+        // [MaxLength(200)]
         public string Titulo { get; set; }
 
         public string Descripcion { get; set; }
@@ -23,7 +25,7 @@ namespace projectef.Models
 
         public virtual Categoria Categoria { get; set; }
 
-        [NotMapped] // No aparecerá en la base de datos
+        // [NotMapped] // No aparecerá en la base de datos
         public string Resumen { get; set; }
     }
 

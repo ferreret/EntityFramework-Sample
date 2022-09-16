@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  sqlserver:
+    image: 'mcr.microsoft.com/mssql/server:2022-latest'
+    user: '0:0'
+    container_name: 'sqlserver2022-ef'
+    environment:
+      ACCEPT_EULA: 'Y'
+      SA_PASSWORD: 'P@ssw0rd'
+      MSSQL_PID: 'Express'
+    ports:
+      - '1433:1433'
+    # volumes:
+    #   - /media/nicolas/DATA1/Trainning/Platzi/EntityFramework/projectef/docker/sqlserver-data:/var/opt/mssql
+
+  
