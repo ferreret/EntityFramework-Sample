@@ -30,3 +30,33 @@
     ```bash
     dotnet run --arch x64 --os linux
     ```
+
+## Migraciones
+
+- Verificar que tenemos la herramienta de migraciones
+```bash
+dotnet ef
+```
+
+- Si no existe la herramienta se instala
+```bash
+dotnet tool install --global dotnet-ef
+```
+
+- Si queremos actualizar la herramienta de migraciones
+```bash
+dotnet tool update --global dotnet-ef
+```
+
+- Inicializa la migración
+```bash
+
+```
+
+- Añade una migración
+```bashdot
+```
+
+- Actualizar la base de datos con las diferentes migraciones
+```bash
+```

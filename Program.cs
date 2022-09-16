@@ -22,8 +22,7 @@ app.MapGet("/", () => "Hello World!");
 
 app.MapGet("/dbconexion", async ([FromServices] TareasContext dbContext) =>
 {
-    dbContext.Database.EnsureCreated();
-    return Results.Ok($"Base de datos en memoria: {dbContext.Database.IsInMemory().ToString()}");
+    return Results.Ok();
 });
 
 app.Run();
